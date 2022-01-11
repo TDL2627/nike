@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <h1>nike List</h1>
+  <form action="javascript:void(0);" onsubmit="searchbar()"> 
+    <div>Search for a nike:</div>
+    <input type="text" id="search" placeholder="Search..." required>
+    <input type="submit" value="Search">
+    <input type="submit" value="Reset" onclick="location.reload()">
+  </form>
+  <p></p>
+  <div>Add another nike: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>Add a price:</label></div>
+  <form action="javascript:void(0);" onsubmit="addnike()"> 
+    <input type="text" id="add-nike" placeholder="Add new nike" required>
+    <select name="add-price" id="add-price" required>
+      <option value="" disabled></option>
+      <option value="Africa">Africa</option>
+      <option value="Antarctica">Antarctica</option>
+      <option value="Asia">Asia</option>
+      <option value="Australia">Australia</option>
+      <option value="Europe">Europe</option>
+      <option value="North America">North America</option>
+      <option value="South America">South America</option>
+    </select>
+    <input type="submit" value="Add">
+  </form>
+
+  <div id="editForm">
+    <form action="javascript:void(0);" id="saveEdit">
+      <input type="text" id="edit-nike" required>
+      <select name="edit-price" id="edit-price" required>
+        <option value="" disabled></option>
+        <option value="Africa">Africa</option>
+        <option value="Antarctica">Antarctica</option>
+        <option value="Asia">Asia</option>
+        <option value="Australia">Australia</option>
+        <option value="Europe">Europe</option>
+        <option value="North America">North America</option>
+        <option value="South America">South America</option>
+      </select>
+      <input type="submit" value="Edit" /> <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+    </form>
+  </div>
+
+  <p id="counter"></p>
+
+  <table>
+    <tr>
+      <th id="name" onclick="sortshoes()">nike</th>
+      <th id="price" onclick="sortprice()">price</th>
+    </tr>
+      <tbody id="shoes">
+      </tbody>
+  </table>
+
+
+
+
+
+    <script src="/script/script.js"></script>
+</body>
+</html>

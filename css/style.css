@@ -1,0 +1,18 @@
+input[type='submit'], button, [aria-label]{
+    cursor: pointer;
+  }
+  #editForm{
+    display: none;
+  }
+  #counter {
+      font-weight: bold;
+  }
+  table, th, td {
+    border:1px solid black;
+  }
+  #name {
+    cursor: pointer;
+  }
+  #continent {
+    cursor: pointer;
+  }
