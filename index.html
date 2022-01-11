@@ -10,6 +10,7 @@
 <body>
     
     <h1>nike List</h1>
+   
   <form action="javascript:void(0);" onsubmit="searchbar()"> 
     <div>Search for a nike:</div>
     <input type="text" id="search" placeholder="Search..." required>
@@ -17,34 +18,26 @@
     <input type="submit" value="Reset" onclick="location.reload()">
   </form>
   <p></p>
-  <div>Add another nike: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>Add a price:</label></div>
-  <form action="javascript:void(0);" onsubmit="addnike()"> 
+  <div>Add another nike: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>Add a type:</label></div>
+  <form action="javascript:void(0);" onsubmit="addNike()"> 
     <input type="text" id="add-nike" placeholder="Add new nike" required>
-    <select name="add-price" id="add-price" required>
-      <option value="" disabled></option>
-      <option value="Africa">Africa</option>
-      <option value="Antarctica">Antarctica</option>
-      <option value="Asia">Asia</option>
-      <option value="Australia">Australia</option>
-      <option value="Europe">Europe</option>
-      <option value="North America">North America</option>
-      <option value="South America">South America</option>
+    <select name="add-type" id="add-type" required>
+      <option value="Boot">Boot</option>
+      <option value="Ankle">Ankle</option>
+      <option value="Slipper">Slipper</option>
     </select>
+    <input type="number" id="add-price">
     <input type="submit" value="Add">
   </form>
 
   <div id="editForm">
     <form action="javascript:void(0);" id="saveEdit">
       <input type="text" id="edit-nike" required>
-      <select name="edit-price" id="edit-price" required>
+      <select name="edit-type" id="edit-type" required>
         <option value="" disabled></option>
-        <option value="Africa">Africa</option>
-        <option value="Antarctica">Antarctica</option>
-        <option value="Asia">Asia</option>
-        <option value="Australia">Australia</option>
-        <option value="Europe">Europe</option>
-        <option value="North America">North America</option>
-        <option value="South America">South America</option>
+        <option value="Boot">Boot</option>
+        <option value="Ankle">Ankle</option>
+        <option value="Slipper">Slipper</option>
       </select>
       <input type="submit" value="Edit" /> <a onclick="closeInput()" aria-label="Close">&#10006;</a>
     </form>
@@ -54,8 +47,11 @@
 
   <table>
     <tr>
-      <th id="name" onclick="sortshoes()">nike</th>
-      <th id="price" onclick="sortprice()">price</th>
+      <th id="name" onclick="sortShoes()">Index</th>
+      <th id="type" onclick="sortType()">Name</th>
+      <th>Type</th>
+      <th>Price</th>
+      <th colspan="2">OPPs</th>
     </tr>
       <tbody id="shoes">
       </tbody>

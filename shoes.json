@@ -1,22 +1,27 @@
 [
     {
         "name": "Columbia",
-        "price": 192
+        "price": 192,
+        "type":"Boot"
     },
     {
         "name": "Japan",
-        "price": 165
+        "price": 165,
+        "type":"Ankle"
     },
     {
         "name": "Egypt",
-        "price": 2000
+        "price": 2000,
+        "type":"Slipper"
     },
     {
         "name": "Canada",
-        "price": 3500
+        "price": 3500,
+        "type":"Boot"
     },
     {
         "name": "France",
-        "price": 600
+        "price": 600,
+        "type":"Ankle"
     }
 ]

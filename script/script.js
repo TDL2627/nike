@@ -16,7 +16,7 @@ let shoes = new Promise(resolve => {
 });
 
 // Counter: Number of shoes in the array
-countshoes = data => {
+countShoes = data => {
   var count = document.getElementById('counter');
   if (data) {
     count.innerHTML = 'There are a total of ' + data + ' shoes';
@@ -26,11 +26,11 @@ countshoes = data => {
     count.innerHTML = 'No nike';
     // Hide the heading text for the table
     document.getElementById('name').style.display = 'none';
-    document.getElementById('price').style.display = 'none';
+    document.getElementById('type').style.display = 'none';
   }
 };
 // Read: GET
-getshoes = () => {
+getShoes = () => {
   shoes.then(allshoes => {
     var data = '';
     if (allshoes.length === 0) {
@@ -38,23 +38,26 @@ getshoes = () => {
     }
     for (i = 0; i < allshoes.length; i++) {
       data += '<tr>';
+      data += '<td>' + [i+1] + '</td>';
       data += '<td>' + allshoes[i].name + '</td>';
-      data += '<td>' + allshoes[i].price + '</td>';
-      data += '<td><button onclick="editnike(' + i + ')">Edit</button></td>';
-      data += '<td><button onclick="deletenike(' + i + ')">Delete</button></td>';
+      data += '<td>' + allshoes[i].type + '</td>';
+      data += '<td>' + 'R'+ allshoes[i].price + '</td>';
+      data += '<td><button onclick="editNike(' + i + ')">Edit</button></td>';
+      data += '<td><button onclick="deleteNike(' + i + ')">Delete</button></td>';
       data += '</tr>';
     }
-    countshoes(allshoes.length);
+    countShoes(allshoes.length);
     return nikeList.innerHTML = data;
   })
   .catch(err => alert(err.message));
 };
 // Create: POST
-addnike = () => {
+addNike = () => {
   var nikeAdded = document.getElementById('add-nike').value.trim();
+  var typeAdded = document.getElementById('add-type').value.trim();
   var priceAdded = document.getElementById('add-price').value.trim();
   shoes.then(allshoes => {
-    if(!nikeAdded || !priceAdded) {
+    if(!nikeAdded || !typeAdded) {
       throw new Error('You have not inserted a value in one of the input fields');
     }
     let foundnike = allshoes.find(nike => nike.name.toLowerCase().includes(nikeAdded.toLowerCase()));
@@ -64,7 +67,8 @@ addnike = () => {
     // Get the value
     var nikeDetails = {
       name: nikeAdded,
-      price: priceAdded
+      type: typeAdded,
+      price:priceAdded
     }
     if (nikeDetails) {
       // addnike the new value
@@ -72,36 +76,36 @@ addnike = () => {
       // Reset input value
       nikeAdded.value = '';
       // Dislay the new list
-      getshoes();
+      getShoes();
     }
   }).catch(err => alert(err.message));
 };
 // Update: PUT
-editnike = item => {
+editNike = item => {
   var editnike = document.getElementById('edit-nike');
-  var editprice = document.getElementById('edit-price');
+  var edittype = document.getElementById('edit-type');
   shoes.then(allshoes => {
     // Display value in the field
     editnike.value = allshoes[item].name;
-    editprice.value = allshoes[item].price;
+    edittype.value = allshoes[item].type;
     // Display fields
     document.getElementById('editForm').style.display = 'block';
     // When the form is submitted
     document.getElementById('saveEdit').onsubmit = () => {
-      if(!editnike.value.trim() || !editprice.value.trim()) {
+      if(!editnike.value.trim() || !edittype.value.trim()) {
         throw new Error('You have not inserted a value in one of the input fields');
       }
       // Get value
       var nikeDetails = {
         name: editnike.value,
-        price: editprice.value
+        type: edittype.value
       };
 
       if (nikeDetails) {
         // editnike value
         allshoes.splice(item, 1, nikeDetails);
         // Display the new list
-        getshoes();
+        getShoes();
         // Hide fields
         closeInput();
       }
@@ -109,12 +113,12 @@ editnike = item => {
   }).catch(err => alert(err.message));
 };
 // Delete: Delete
-deletenike = item => {
+deleteNike = item => {
   shoes.then(allshoes => {
     // deletenike the current row
     allshoes.splice(item, 1);
     // Display the new list
-    getshoes();
+    getShoes();
   }).catch(err => alert(err.message));
 };
 // Search: nike Search
@@ -133,18 +137,18 @@ searchbar = () => {
     for (i = 0; i < shoesFound.length; i++) {
       data += '<tr>';
       data += '<td>' + shoesFound[i].name + '</td>';
-      data += '<td>' + shoesFound[i].price + '</td>';
+      data += '<td>' + shoesFound[i].type + '</td>';
       data += '<td><button onclick="editnike(' + i + ')">Edit</button></td>';
       data += '<td><button onclick="deletenike(' + i + ')">Delete</button></td>';
       data += '</tr>';
     }
-    countshoes(shoesFound.length);
+    countShoes(shoesFound.length);
     return nikeList.innerHTML = data;
   }).catch(err => alert(err.message));
 };
 
 // Sort: Sort shoes alphabetically
-sortshoes = () => {
+sortShoes = () => {
   shoes.then(allshoes => {
     // Sorting alphabetically in decending order
     allshoes.sort((a, b) => {
@@ -158,17 +162,17 @@ sortshoes = () => {
       }
       return 0;
     });
-    getshoes();
+    getShoes();
   }).catch(err => alert(err.message));
 }
 
-// Sort: Sort prices alphabetically
-sortprice = () => {
+// Sort: Sort types alphabetically
+sortType = () => {
   shoes.then(allshoes => {
     // Sorting alphabetically in decending order
     allshoes.sort((a, b) => {
-      let fa = a.price.toLowerCase(),
-      fb = b.price.toLowerCase();
+      let fa = a.type.toLowerCase(),
+      fb = b.type.toLowerCase();
       if (fa < fb) {
         return 1;
       }
@@ -177,12 +181,12 @@ sortprice = () => {
       }
       return 0;
     });
-    getshoes();
+    getShoes();
   }).catch(err => alert(err.message));
 }
 
 // Where the script starts. This executes when the file loads on the browser
-getshoes();
+getShoes();
 
 // Close Edit form
 closeInput = () => {
