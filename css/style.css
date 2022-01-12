@@ -16,3 +16,15 @@ input[type='submit'], button, [aria-label]{
   #continent {
     cursor: pointer;
   }
+  .piks{
+    height: 100px;
+  }
+  html{
+    text-align: center;
+    
+  }
+  h1{
+    color: white;
+  }
+  
+  

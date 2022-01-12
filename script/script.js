@@ -42,6 +42,7 @@ getShoes = () => {
       data += '<td>' + allshoes[i].name + '</td>';
       data += '<td>' + allshoes[i].type + '</td>';
       data += '<td>' + 'R'+ allshoes[i].price + '</td>';
+      data +='<td> <img class="piks" src="'  + allshoes[i].image +'" alt="shoe pic" > </td>' ;
       data += '<td><button onclick="editNike(' + i + ')">Edit</button></td>';
       data += '<td><button onclick="deleteNike(' + i + ')">Delete</button></td>';
       data += '</tr>';
@@ -192,3 +193,10 @@ getShoes();
 closeInput = () => {
   document.getElementById('editForm').style.display = 'none';
 }
+// modal
+var myModal = document.getElementById('myModal')
+var myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', function () {
+  myInput.focus()
+})

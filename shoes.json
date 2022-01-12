@@ -2,26 +2,31 @@
     {
         "name": "Columbia",
         "price": 192,
-        "type":"Boot"
+        "type":"Boot",
+        "image":"https://images.solecollector.com/complex/images/c_crop,h_939,w_1669,x_23,y_0/c_fill,dpr_2.0,f_auto,fl_lossy,q_auto,w_680/ghhmxtpwscxdaoiakkei/2016-nike-mag-back-to-the-future-shoes"
     },
     {
         "name": "Japan",
         "price": 165,
-        "type":"Ankle"
+        "type":"Ankle",
+        "image":"https://images.solecollector.com/complex/images/c_crop,h_939,w_1669,x_23,y_0/c_fill,dpr_2.0,f_auto,fl_lossy,q_auto,w_680/ghhmxtpwscxdaoiakkei/2016-nike-mag-back-to-the-future-shoes"
     },
     {
         "name": "Egypt",
         "price": 2000,
-        "type":"Slipper"
+        "type":"Slipper",
+        "image":"https://images.solecollector.com/complex/images/c_crop,h_939,w_1669,x_23,y_0/c_fill,dpr_2.0,f_auto,fl_lossy,q_auto,w_680/ghhmxtpwscxdaoiakkei/2016-nike-mag-back-to-the-future-shoes"
     },
     {
         "name": "Canada",
         "price": 3500,
-        "type":"Boot"
+        "type":"Boot",
+        "image":"https://images.solecollector.com/complex/images/c_crop,h_939,w_1669,x_23,y_0/c_fill,dpr_2.0,f_auto,fl_lossy,q_auto,w_680/ghhmxtpwscxdaoiakkei/2016-nike-mag-back-to-the-future-shoes"
     },
     {
         "name": "France",
         "price": 600,
-        "type":"Ankle"
+        "type":"Ankle",
+        "image":"https://images.solecollector.com/complex/images/c_crop,h_939,w_1669,x_23,y_0/c_fill,dpr_2.0,f_auto,fl_lossy,q_auto,w_680/ghhmxtpwscxdaoiakkei/2016-nike-mag-back-to-the-future-shoes"
     }
 ]
