@@ -19,7 +19,9 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Launch demo modal
+            </button>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
@@ -55,16 +57,7 @@
   </form>
   <p></p>
   <div>Add another nike: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>Add a type:</label></div>
-  <form action="javascript:void(0);" onsubmit="addNike()"> 
-    <input type="text" id="add-nike" placeholder="Add new nike" required>
-    <select name="add-type" id="add-type" required>
-      <option value="Boot">Boot</option>
-      <option value="Ankle">Ankle</option>
-      <option value="Slipper">Slipper</option>
-    </select>
-    <input type="number" id="add-price">
-    <input type="submit" value="Add">
-  </form>
+
 
   <div id="editForm">
     <form action="javascript:void(0);" id="saveEdit">
@@ -79,6 +72,34 @@
     </form>
   </div>
 
+
+  <!-- modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="javascript:void(0);" onsubmit="addNike()"> 
+            <input type="text" id="add-nike" placeholder="Add new nike" required>
+            <select name="add-type" id="add-type" required>
+              <option value="Boot">Boot</option>
+              <option value="Ankle">Ankle</option>
+              <option value="Slipper">Slipper</option>
+            </select>
+            <input type="number" id="add-price">
+            <input type="submit" value="Add">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <p id="counter"></p>
 
   <table class="table table-dark table-hover">
