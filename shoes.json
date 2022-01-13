@@ -1,19 +1,19 @@
 [
     {
-        "name": "Columbia",
-        "price": 192,
+        "name": "Air Mag",
+        "price": 350000,
         "type":"Boot",
         "image":"https://images.solecollector.com/complex/images/c_crop,h_939,w_1669,x_23,y_0/c_fill,dpr_2.0,f_auto,fl_lossy,q_auto,w_680/ghhmxtpwscxdaoiakkei/2016-nike-mag-back-to-the-future-shoes"
     },
     {
-        "name": "Japan",
-        "price": 165,
+        "name": "Air Max",
+        "price": 2000,
         "type":"Ankle",
-        "image":"https://images.solecollector.com/complex/images/c_crop,h_939,w_1669,x_23,y_0/c_fill,dpr_2.0,f_auto,fl_lossy,q_auto,w_680/ghhmxtpwscxdaoiakkei/2016-nike-mag-back-to-the-future-shoes"
+        "image":"https://i.pinimg.com/564x/ce/d4/83/ced4837c43f57df52d13161a7e92dc74.jpg"
     },
     {
-        "name": "Egypt",
-        "price": 2000,
+        "name": "Air Force 1",
+        "price": 1500,
         "type":"Slipper",
         "image":"https://images.solecollector.com/complex/images/c_crop,h_939,w_1669,x_23,y_0/c_fill,dpr_2.0,f_auto,fl_lossy,q_auto,w_680/ghhmxtpwscxdaoiakkei/2016-nike-mag-back-to-the-future-shoes"
     },

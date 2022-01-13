@@ -17,8 +17,8 @@ input[type='submit'], button, [aria-label]{
     cursor: pointer;
   }
   .piks{
-    height: 100px;
-    width: 200px;
+    height: 200px;
+    width: 300px;
   }
   html{
     text-align: center;
