@@ -57,19 +57,21 @@ addNike = () => {
   var nikeAdded = document.getElementById('add-nike').value.trim();
   var typeAdded = document.getElementById('add-type').value.trim();
   var priceAdded = document.getElementById('add-price').value.trim();
+  var picAdded = document.getElementById('add-pic').value.trim();
   shoes.then(allshoes => {
     if(!nikeAdded || !typeAdded) {
       throw new Error('You have not inserted a value in one of the input fields');
     }
     let foundnike = allshoes.find(nike => nike.name.toLowerCase().includes(nikeAdded.toLowerCase()));
     if(foundnike) {
-      throw new Error('You are adding a duplicate value');
+      throw new Error('You are adding a same');
     }
     // Get the value
     var nikeDetails = {
       name: nikeAdded,
       type: typeAdded,
-      price:priceAdded
+      price:priceAdded,
+      image:picAdded
     }
     if (nikeDetails) {
       // addnike the new value
